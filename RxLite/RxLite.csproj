@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.3</TargetFramework>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Metadata">
+    <Title>Reactive Extensions Lite (Rx) for C#</Title>
+    <Description>Provides support for library authors exposing IObservables without taking a dependency on System.Reactive.</Description>
+
+    <Authors>Daniel Cazzulino</Authors>
+    <Owners>kzu</Owners>
+
+    <PackageProjectUrl>https://github.com/kzu/RxLite/</PackageProjectUrl>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <Copyright>Copyright © 2019 Daniel Cazzulino</Copyright>
+
+    <PackageOutputPath Condition="'$(PackageOutputPath)' == ''">$(MSBuildThisFileDirectory)..\out</PackageOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="RxLite.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="@(Compile)" Pack="true" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GitInfo" Version="2.0.20" PrivateAssets="all" />
+  </ItemGroup>
+
+</Project>

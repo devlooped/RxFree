@@ -1,0 +1,18 @@
+<Project>
+
+  <PropertyGroup>
+    <GenerateNuspecDependsOn>SetVersion;$(GenerateNuspecDependsOn)</GenerateNuspecDependsOn>
+    <NoWarn>NU5105;$(NoWarn)</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <CI Condition="'$(CI)' == '' and '$(TF_BUILD)' == 'true'">true</CI>
+    <CI Condition="'$(CI)' == ''">false</CI>
+
+    <GitBranch Condition="'$(SYSTEM_PULLREQUEST_TARGETBRANCH)' != ''">$(SYSTEM_PULLREQUEST_TARGETBRANCH)</GitBranch>
+    <GitBranch Condition="'$(SYSTEM_PULLREQUEST_TARGETBRANCH)' == '' and '$(BUILD_SOURCEBRANCHNAME)' != ''">$(BUILD_SOURCEBRANCHNAME)</GitBranch>
+  </PropertyGroup>
+
+  <Target Name="GitVersion" />
+  
+</Project>
