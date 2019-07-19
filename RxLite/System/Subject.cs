@@ -15,6 +15,8 @@
 
 //https://github.com/dotnet/reactive/blob/master/Rx.NET/Source/src/System.Reactive/Subjects/Subject.cs
 
+using System.CodeDom.Compiler;
+using System.Runtime.CompilerServices;
 using System.Threading;
 
 namespace System
@@ -24,6 +26,8 @@ namespace System
     /// Each notification is broadcasted to all subscribed observers.
     /// </summary>
     /// <typeparam name="T">The type of the elements processed by the subject.</typeparam>
+    [GeneratedCode("RxLite", "*")]
+    [CompilerGenerated]
     internal sealed class Subject<T> : IObserver<T>, IObservable<T>, IDisposable
     {
         static readonly SubjectDisposable[] Terminated = new SubjectDisposable[0];

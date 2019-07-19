@@ -1,10 +1,14 @@
-﻿using System.Runtime.ExceptionServices;
+﻿using System.CodeDom.Compiler;
+using System.Runtime.CompilerServices;
+using System.Runtime.ExceptionServices;
 
 namespace System
 {
     /// <summary>
     /// Provides a set of static methods for subscribing delegates to observables.
     /// </summary>
+    [GeneratedCode("RxLite", "*")]
+    [CompilerGenerated]
     internal static class ObservableExtensions
     {
         static readonly Action<Exception> rethrow = e => ExceptionDispatchInfo.Capture(e).Throw();
