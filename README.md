@@ -14,5 +14,5 @@ classes for your own implementation usage, with no external dependencies.
 
 [![Version](https://img.shields.io/nuget/vpre/RxFree.svg)](https://www.nuget.org/packages/RxFree)
 [![Downloads](https://img.shields.io/nuget/dt/RxFree.svg)](https://www.nuget.org/packages/RxFree)
-[![Build Status](https://dev.azure.com/kzu/builds/_apis/build/status/RxFree?branchName=master)](https://kzu.visualstudio.com/builds/_build/latest?definitionId=20?branchName=master)
-[![License](https://img.shields.io/github/license/kzu/RxFree.svg)](https://github.com/kzu/RxFree/blob/master/LICENSE)
+[![Build Status](https://dev.azure.com/kzu/builds/_apis/build/status/RxFree?branchName=master)](https://build.azdo.io/kzu/oss/26)
+[![License](https://img.shields.io/github/license/kzu/RxFree.svg)](LICENSE)
