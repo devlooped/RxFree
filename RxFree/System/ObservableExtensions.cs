@@ -7,7 +7,7 @@ namespace System
     /// <summary>
     /// Provides a set of static methods for subscribing delegates to observables.
     /// </summary>
-    [GeneratedCode("RxLite", "*")]
+    [GeneratedCode("RxFree", "*")]
     [CompilerGenerated]
     internal static class ObservableExtensions
     {

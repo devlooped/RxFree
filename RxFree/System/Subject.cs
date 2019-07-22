@@ -26,7 +26,7 @@ namespace System
     /// Each notification is broadcasted to all subscribed observers.
     /// </summary>
     /// <typeparam name="T">The type of the elements processed by the subject.</typeparam>
-    [GeneratedCode("RxLite", "*")]
+    [GeneratedCode("RxFree", "*")]
     [CompilerGenerated]
     internal sealed class Subject<T> : IObserver<T>, IObservable<T>, IDisposable
     {

@@ -33,27 +33,27 @@ stages:
     - task: MSBuild@1
       displayName: Restore
       inputs:
-        solution: RxLite.sln
+        solution: RxFree.sln
         configuration: $(Configuration)
         msbuildArguments: -t:restore
 
     - task: MSBuild@1
       displayName: Set Version
       inputs:
-        solution: RxLite/RxLite.csproj
+        solution: RxFree/RxFree.csproj
         msbuildArguments: -t:version
 
     - task: MSBuild@1
       displayName: Build
       inputs:
-        solution: RxLite.sln
+        solution: RxFree.sln
         configuration: $(Configuration)
         msbuildArguments: -p:GeneratePackageOnBuild=true -p:PackageOutputPath=$(Build.ArtifactStagingDirectory)
 
     - task: VSTest@2
       displayName: Test
       inputs:
-        testAssemblyVer2: RxLite.Tests/bin/*/*.Tests.dll
+        testAssemblyVer2: RxFree.Tests/bin/*/*.Tests.dll
         runInParallel: true
         codeCoverageEnabled: true
         publishRunAttachments: true

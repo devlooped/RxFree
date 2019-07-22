@@ -7,13 +7,13 @@
   </PropertyGroup>
 
   <PropertyGroup Label="Metadata">
-    <Title>Reactive Extensions Lite (Rx) for C#</Title>
-    <Description>Provides support for library authors exposing IObservables without taking a dependency on System.Reactive.</Description>
+    <Title>Reactive Extensions for Libraries (RxFree) for C#</Title>
+    <Description>Provides dependency-free (source-bsaed) support for library authors exposing IObservables without taking a dependency on System.Reactive (or anything else).</Description>
 
     <Authors>Daniel Cazzulino</Authors>
     <Owners>kzu</Owners>
 
-    <PackageProjectUrl>https://github.com/kzu/RxLite/</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/kzu/RxFree/</PackageProjectUrl>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <Copyright>Copyright © 2019 Daniel Cazzulino</Copyright>
 
@@ -21,7 +21,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <InternalsVisibleTo Include="RxLite.Tests" />
+    <InternalsVisibleTo Include="RxFree.Tests" />
   </ItemGroup>
 
   <ItemGroup>
