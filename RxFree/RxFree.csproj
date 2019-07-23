@@ -8,7 +8,7 @@
 
   <PropertyGroup Label="Metadata">
     <Title>Reactive Extensions for Libraries (RxFree) for C#</Title>
-    <Description>Provides dependency-free (source-bsaed) support for library authors exposing IObservables without taking a dependency on System.Reactive (or anything else).</Description>
+    <Description>Provides dependency-free (source-based) support for library authors exposing IObservables without taking a dependency on System.Reactive (or anything else).</Description>
 
     <Authors>Daniel Cazzulino</Authors>
     <Owners>kzu</Owners>
