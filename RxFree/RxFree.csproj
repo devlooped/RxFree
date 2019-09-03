@@ -26,6 +26,7 @@
 
   <ItemGroup>
     <Compile Update="@(Compile)" Pack="true" />
+    <None Update="build\RxFree.props" CopyToOutputDirectory="PreserveNewest" Pack="true" PackagePath="build\%(Filename)%(Extension)" />
   </ItemGroup>
 
   <ItemGroup>

@@ -25,7 +25,7 @@ InformationalVersion=$(InformationalVersion)" />
 											 Include="pr.$(SYSTEM_PULLREQUEST_PULLREQUESTNUMBER)"/>
       <VersionMetadata Include="sha.$(GitCommit)" Condition="'$(GitCommit)' != ''"/>
       <VersionMetadata Condition="$(CI)"
-											 Include="build.$(BUILD_BUILDID)"/>
+											 Include="azdo.$(BUILD_BUILDID)"/>
     </ItemGroup>
 
     <PropertyGroup>
