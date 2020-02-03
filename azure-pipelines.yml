@@ -3,21 +3,23 @@ trigger:
   branches:
     include:
     - master
-    - features/*
-    - releases/*
+    - feature/*
+    - release/*
     - dev/*
   paths:
     exclude:
     - docs
 pr:
   - master
-  - features/*
-  - releases/*
+  - feature/*
+  - release/*
 
 variables:
 - group: Sleet
 - name: Configuration
   value: Release
+- name: DotNetVersion
+  value: 3.1.x
 
 stages:
 
@@ -29,6 +31,17 @@ stages:
     steps:
     - checkout: self
       clean: true
+
+    - task: UseDotNet@2
+      inputs:
+          version: $(DotNetVersion)
+          performMultiLevelLookup: true
+
+    - script: dotnet tool update -g dotnet-format
+      displayName: Install dotnet-format
+
+    - script: dotnet format --dry-run --check -v:diag
+      displayName: Run dotnet-format to ensure compliance
 
     - task: MSBuild@1
       displayName: Restore

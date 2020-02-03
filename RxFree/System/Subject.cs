@@ -13,7 +13,8 @@
 //implied. See the License for the specific language governing permissions
 //and limitations under the License.
 
-//https://github.com/dotnet/reactive/blob/master/Rx.NET/Source/src/System.Reactive/Subjects/Subject.cs
+// https://github.com/dotnet/reactive/blob/master/Rx.NET/Source/src/System.Reactive/Subjects/Subject.cs
+// https://github.com/dotnet/reactive/blob/master/LICENSE
 
 using System.CodeDom.Compiler;
 using System.Runtime.CompilerServices;
