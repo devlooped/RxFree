@@ -37,11 +37,8 @@ stages:
           version: $(DotNetVersion)
           performMultiLevelLookup: true
 
-    - script: dotnet tool update -g dotnet-format
-      displayName: Install dotnet-format
-
-    - script: dotnet format --dry-run --check -v:diag
-      displayName: Run dotnet-format to ensure compliance
+    - script: 'dotnet tool update -g dotnet-format && dotnet format --dry-run --check -v:diag'
+      displayName: Check formatting
 
     - task: MSBuild@1
       displayName: Restore
