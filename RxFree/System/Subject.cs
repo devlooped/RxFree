@@ -29,8 +29,9 @@ namespace System
     /// <typeparam name="T">The type of the elements processed by the subject.</typeparam>
     [GeneratedCode("RxFree", "*")]
     [CompilerGenerated]
-    internal sealed class Subject<T> : IObserver<T>, IObservable<T>, IDisposable
+    internal class Subject<T> : IObserver<T>, IObservable<T>, IDisposable
     {
+        static readonly SubjectDisposable[] Empty = new SubjectDisposable[0];
         static readonly SubjectDisposable[] Terminated = new SubjectDisposable[0];
         static readonly SubjectDisposable[] Disposed = new SubjectDisposable[0];
 
@@ -40,12 +41,17 @@ namespace System
         /// <summary>
         /// Creates a subject.
         /// </summary>
-        public Subject() => Volatile.Write(ref observers, Array.Empty<SubjectDisposable>());
+        public Subject() => Volatile.Write(ref observers, Empty);
+
+        /// <summary>
+        /// Indicates whether the subject has been disposed.
+        /// </summary>
+        public virtual bool IsDisposed => Volatile.Read(ref this.observers) == Disposed;
 
         /// <summary>
         /// Notifies all subscribed observers about the end of the sequence.
         /// </summary>
-        public void OnCompleted()
+        public virtual void OnCompleted()
         {
             for (; ; )
             {
@@ -55,7 +61,7 @@ namespace System
                     exception = null;
                     ThrowDisposed();
                 }
-                if (observers == Terminated)
+                if (observers == Terminated || observers == Empty)
                 {
                     break;
                 }
@@ -75,7 +81,7 @@ namespace System
         /// </summary>
         /// <param name="error">The exception to send to all currently subscribed observers.</param>
         /// <exception cref="ArgumentNullException"><paramref name="error"/> is null.</exception>
-        public void OnError(Exception error)
+        public virtual void OnError(Exception error)
         {
             if (error == null)
             {
@@ -90,7 +96,7 @@ namespace System
                     exception = null;
                     ThrowDisposed();
                 }
-                if (observers == Terminated)
+                if (observers == Terminated || observers == Empty)
                 {
                     break;
                 }
@@ -110,7 +116,7 @@ namespace System
         /// Notifies all subscribed observers about the arrival of the specified element in the sequence.
         /// </summary>
         /// <param name="value">The value to send to all currently subscribed observers.</param>
-        public void OnNext(T value)
+        public virtual void OnNext(T value)
         {
             var observers = Volatile.Read(ref this.observers);
             if (observers == Disposed)
@@ -130,7 +136,7 @@ namespace System
         /// <param name="observer">Observer to subscribe to the subject.</param>
         /// <returns>Disposable object that can be used to unsubscribe the observer from the subject.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="observer"/> is null.</exception>
-        public IDisposable Subscribe(IObserver<T> observer)
+        public virtual IDisposable Subscribe(IObserver<T> observer)
         {
             if (observer == null)
             {
@@ -181,7 +187,7 @@ namespace System
         /// <summary>
         /// Releases all resources used by the current instance of the <see cref="Subject{T}"/> class and unsubscribes all observers.
         /// </summary>
-        public void Dispose()
+        public virtual void Dispose()
         {
             Interlocked.Exchange(ref observers, Disposed);
             exception = null;
