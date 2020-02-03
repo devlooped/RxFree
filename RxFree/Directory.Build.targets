@@ -18,6 +18,8 @@ InformationalVersion=$(InformationalVersion)" />
       <GitBranch Condition="'$(_GitBranchIndexOfSlash)' != '-1'">$(GitBranch.Substring($([MSBuild]::Add($(_GitBranchIndexOfSlash), 1))))</GitBranch>
 
       <GitSemVerLabel Condition="'$(GitSemVerLabel)' == '' And '$(GitBranch)' != 'master'">$(GitBranch)</GitSemVerLabel>
+      <GitSemVerLabel Condition="'$(GitSemVerLabel)' != ''">$(GitSemVerLabel).$(GitSemVerPatch)</GitSemVerLabel>
+      <GitSemVerDashLabel Condition="'$(GitSemVerLabel)' != ''">-$(GitSemVerLabel)</GitSemVerDashLabel>
     </PropertyGroup>
 
     <ItemGroup>
@@ -29,7 +31,8 @@ InformationalVersion=$(InformationalVersion)" />
     </ItemGroup>
 
     <PropertyGroup>
-      <VersionPrefix>$(GitSemVerMajor).$(GitSemVerMinor).$(GitSemVerPatch)</VersionPrefix>
+      <VersionPrefix Condition="'$(GitSemVerLabel)' == ''">$(GitSemVerMajor).$(GitSemVerMinor).$(GitSemVerPatch)</VersionPrefix>
+      <VersionPrefix Condition="'$(GitSemVerLabel)' != ''">$(GitSemVerMajor).$(GitSemVerMinor).$(GitBaseVersionPatch)</VersionPrefix>
       <VersionSuffix>$(GitSemVerLabel)+@(VersionMetadata -> '%(Identity)', '-')</VersionSuffix>
 
       <AssemblyVersion>$(VersionPrefix)</AssemblyVersion>
