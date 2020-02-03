@@ -15,7 +15,7 @@ namespace System
 
             subject.OnNext(1);
             Assert.Equal(1, value);
-            new[] { 1, 2 }.OfType<int>();
+
             subject.OnNext(1);
             Assert.Equal(2, value);
 

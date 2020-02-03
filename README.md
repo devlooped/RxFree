@@ -9,10 +9,14 @@ For the most part, a producer needs the `Subject<T>` (read more about
 and maybe the `ObservableExtensions` that provide `Subscribe` overloads to provide 
 lambdas instead of an `IObserver<T>`. 
 
-Two other typical activities of a producer are to handle disposables and potentially 
-filter other producers they consume themselves. So the following simple additional 
-features are provided: `CompositeDisposable` and `OfType<T>` extension method for 
-`IObservable<T>`.
+In addition, typical activities of a producer are to handle disposables and potentially 
+filter/query/convert other producers they consume themselves. So the following simple additional 
+features are provided: 
+
+* `CompositeDisposable`: allows disposing subscriptions as a group
+* `Select`/`Where`/`OfType` Linq operators: basic implementations of these common operators 
+  for `IObservable<T>`.
+
 
 This is what this project provides at the moment, in source form, in your project, as internal 
 classes for your own implementation usage, with no external dependencies.
