@@ -15,6 +15,15 @@ namespace System
         static readonly Action nop = () => { };
 
         /// <summary>
+        /// Filters the elements of an observable sequence based on the specified type.
+        /// </summary>
+        /// <typeparam name="TResult">The type to filter the elements in the source sequence on.</typeparam>
+        /// <param name="source">The sequence that contains the elements to be filtered.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
+        public static IObservable<T> OfType<T>(this IObservable<object> source)
+            => new OfTypeSubject<T>(source ?? throw new ArgumentNullException(nameof(source)));
+
+        /// <summary>
         /// Subscribes to the observable providing just the <paramref name="onNext"/> delegate.
         /// </summary>
         public static IDisposable Subscribe<T>(this IObservable<T> source, Action<T> onNext)
@@ -59,6 +68,30 @@ namespace System
             public void OnError(Exception error) => onError(error);
 
             public void OnNext(T value) => onNext(value);
+        }
+
+        class OfTypeSubject<T> : Subject<T>
+        {
+            IDisposable subscription;
+
+            public OfTypeSubject(IObservable<object> source)
+            {
+                subscription = source.Subscribe(
+                    next =>
+                    {
+                        if (next is T result)
+                            OnNext(result);
+                    },
+                    OnError,
+                    OnCompleted);
+            }
+
+            public override void Dispose()
+            {
+                base.Dispose();
+                subscription?.Dispose();
+                subscription = null;
+            }
         }
     }
 }
