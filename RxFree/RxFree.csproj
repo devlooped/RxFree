@@ -8,7 +8,17 @@
 
   <PropertyGroup Label="Metadata">
     <Title>Reactive Extensions for Libraries (RxFree) for C#</Title>
-    <Description>Provides dependency-free (source-based) support for library authors exposing IObservables without taking a dependency on System.Reactive (or anything else).</Description>
+    <Description>Provides dependency-free (source-based) support for library authors exposing IObservables without taking a dependency on System.Reactive (or anything else).
+
+Provided types and extension methods:
+- Disposable.Empty and Disposable.Create(Action)
+- CompositeDisposable
+ - Subject&lt;T&gt;
+ - Extensions for IObservable&lt;T&gt;:
+   * Subscribe overloads receiving delegates for onNext, onError and onCompleted
+   * Select/Where linq operators over observables
+   * OfType to project an observable of one type into another
+</Description>
 
     <Authors>Daniel Cazzulino</Authors>
     <Owners>kzu</Owners>
