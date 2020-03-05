@@ -14,10 +14,10 @@ Provided types and extension methods:
 - Disposable.Empty and Disposable.Create(Action)
 - CompositeDisposable
  - Subject&lt;T&gt;
- - Extensions for IObservable&lt;T&gt;:
+ - For IObservable&lt;T&gt;:
    * Subscribe overloads receiving delegates for onNext, onError and onCompleted
-   * Select/Where linq operators over observables
-   * OfType to project an observable of one type into another
+   * Select/Where LINQ operators
+   * OfType&lt;T&gt; to filter and project an observable of one type into another
 </Description>
 
     <Authors>Daniel Cazzulino</Authors>
