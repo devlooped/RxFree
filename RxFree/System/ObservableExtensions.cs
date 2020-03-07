@@ -1,4 +1,5 @@
 ﻿using System.CodeDom.Compiler;
+using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 using System.Runtime.ExceptionServices;
 
@@ -9,6 +10,7 @@ namespace System
     /// </summary>
     [GeneratedCode("RxFree", "*")]
     [CompilerGenerated]
+    [ExcludeFromCodeCoverage]
     internal static partial class ObservableExtensions
     {
         static readonly Action<Exception> rethrow = e => ExceptionDispatchInfo.Capture(e).Throw();

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
 
 namespace System
 {
@@ -6,6 +7,7 @@ namespace System
     /// For compatibility with Rx
     /// </summary>
     [EditorBrowsable(EditorBrowsableState.Never)]
+    [ExcludeFromCodeCoverage]
     internal class StableCompositeDisposable
     {
         /// <summary>

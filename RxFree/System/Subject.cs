@@ -17,6 +17,7 @@
 // https://github.com/dotnet/reactive/blob/master/LICENSE
 
 using System.CodeDom.Compiler;
+using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 using System.Threading;
 
@@ -29,6 +30,7 @@ namespace System
     /// <typeparam name="T">The type of the elements processed by the subject.</typeparam>
     [GeneratedCode("RxFree", "*")]
     [CompilerGenerated]
+    [ExcludeFromCodeCoverage]
     internal class Subject<T> : IObserver<T>, IObservable<T>, IDisposable
     {
         static readonly SubjectDisposable[] Empty = new SubjectDisposable[0];

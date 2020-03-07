@@ -1,10 +1,12 @@
-﻿using System.Threading;
+﻿using System.Diagnostics.CodeAnalysis;
+using System.Threading;
 
 namespace System
 {
     /// <summary>
     /// Provides a set of static methods for creating <see cref="IDisposable"/> objects.
     /// </summary>
+    [ExcludeFromCodeCoverage]
     public static class Disposable
     {
         /// <summary>
