@@ -33,7 +33,7 @@ namespace System
         /// <summary>
         /// Adds a disposable to the <see cref="CompositeDisposable"/> or disposes the disposable if the <see cref="CompositeDisposable"/> is disposed.
         /// </summary>
-        /// <param name="item">Disposable to add.</param>
+        /// <param name="disposable">Disposable to add.</param>
         public void Add(IDisposable disposable)
         {
             if (disposed)

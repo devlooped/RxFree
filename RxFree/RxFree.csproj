@@ -4,7 +4,8 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-  </PropertyGroup>
+     <DocumentationFile>bin\RxFree.xml</DocumentationFile>
+ </PropertyGroup>
 
   <PropertyGroup Label="Metadata">
     <Title>Reactive Extensions for Libraries (RxFree) for C#</Title>
