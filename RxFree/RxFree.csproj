@@ -35,7 +35,18 @@ Provided types and extension methods:
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="@(Compile)" Pack="true" />
+    <Compile Remove="build\Nullable\*.cs" Condition="'$(Nullable)' != 'enable'" />
+    <Compile Remove="build\Legacy\*.cs" Condition="'$(Nullable)' == 'enable'" />
+    <None Include="build\**\*.cs">
+      <PackagePath>build\%(RecursiveDir)%(Filename)%(Extension)</PackagePath>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Pack>true</Pack>
+    </None>
+    <None Update="build\RxFree.targets">
+      <PackagePath>build\%(Filename)%(Extension)</PackagePath>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Pack>true</Pack>
+    </None>
     <None Update="build\RxFree.props" CopyToOutputDirectory="PreserveNewest" Pack="true" PackagePath="build\%(Filename)%(Extension)" />
   </ItemGroup>
 
