@@ -63,7 +63,7 @@ namespace System
                     exception = null;
                     ThrowDisposed();
                 }
-                if (observers == Terminated || observers == Empty)
+                if (observers == Terminated)
                 {
                     break;
                 }
@@ -98,7 +98,7 @@ namespace System
                     exception = null;
                     ThrowDisposed();
                 }
-                if (observers == Terminated || observers == Empty)
+                if (observers == Terminated)
                 {
                     break;
                 }

@@ -63,7 +63,7 @@ stages:
     - task: VSTest@2
       displayName: Test
       inputs:
-        testAssemblyVer2: RxFree.Tests/bin/*/*.Tests.dll
+        testAssemblyVer2: '**/*Tests.dll'
         runInParallel: true
         codeCoverageEnabled: true
         publishRunAttachments: true
