@@ -65,7 +65,9 @@ namespace System
             Assert.Equal(2, count);
         }
 
+#pragma warning disable CS8618 // Non-nullable field is uninitialized. Consider declaring as nullable.
         class A { public string Id { get; set; } }
+#pragma warning restore CS8618 // Non-nullable field is uninitialized. Consider declaring as nullable.
         class B : A { }
         class C : A { }
     }

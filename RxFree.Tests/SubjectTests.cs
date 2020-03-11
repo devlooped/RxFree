@@ -177,14 +177,18 @@ namespace System
         [Fact]
         public void OnErrorNullThrows()
         {
+#pragma warning disable CS8625 // Cannot convert null literal to non-nullable reference type.
             Assert.Throws<ArgumentNullException>(() => new Subject<int>().OnError(null));
+#pragma warning restore CS8625 // Cannot convert null literal to non-nullable reference type.
         }
 
 
         [Fact]
         public void SubscribeNullThrows()
         {
+#pragma warning disable CS8625 // Cannot convert null literal to non-nullable reference type.
             Assert.Throws<ArgumentNullException>(() => new Subject<int>().Subscribe(null));
+#pragma warning restore CS8625 // Cannot convert null literal to non-nullable reference type.
         }
 
         [Fact]
