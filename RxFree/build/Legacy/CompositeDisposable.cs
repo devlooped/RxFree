@@ -1,5 +1,6 @@
 ﻿using System.CodeDom.Compiler;
 using System.Collections.Concurrent;
+using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 using System.Threading;
 
@@ -10,6 +11,7 @@ namespace System
     /// </summary>
     [GeneratedCode("RxFree", "*")]
     [CompilerGenerated]
+    [ExcludeFromCodeCoverage]
     internal class CompositeDisposable : IDisposable
     {
         bool disposed;
@@ -64,6 +66,7 @@ namespace System
         /// <returns>Group of disposable resources that are disposed together.</returns>
         public static IDisposable Create(params IDisposable[] disposables) => new DisposableArray(disposables);
 
+        [ExcludeFromCodeCoverage]
         sealed class DisposableArray : IDisposable
         {
             IDisposable[] disposables;
