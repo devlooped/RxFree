@@ -7,21 +7,24 @@
         /// </summary>
         /// <typeparam name="T">The type to filter the elements in the source sequence on.</typeparam>
         /// <param name="source">The sequence that contains the elements to be filtered.</param>
+        /// <param name="predicate">Predicate to apply to elements in <paramref name="source"/> for filtering.</param>
         /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
-        public static IObservable<T> OfType<T>(this IObservable<object> source)
-            => new OfTypeSubject<T>(source ?? throw new ArgumentNullException(nameof(source)));
+        public static IObservable<T> Where<T>(this IObservable<T> source, Func<T, bool> predicate) where T : notnull
+            => new WhereSubject<T>(source ?? throw new ArgumentNullException(nameof(source)), predicate ?? throw new ArgumentNullException(nameof(predicate)));
 
-        class OfTypeSubject<T> : Subject<T>
+        class WhereSubject<T> : Subject<T> where T : notnull
         {
             IDisposable? subscription;
+            Func<T, bool>? predicate;
 
-            public OfTypeSubject(IObservable<object> source)
+            public WhereSubject(IObservable<T> source, Func<T, bool> predicate)
             {
+                this.predicate = predicate;
                 subscription = source.Subscribe(
                     next =>
                     {
-                        if (next is T result)
-                            OnNext(result);
+                        if (this.predicate(next))
+                            OnNext(next);
                     },
                     OnError,
                     OnCompleted);
@@ -32,6 +35,7 @@
                 base.Dispose();
                 subscription?.Dispose();
                 subscription = null;
+                predicate = null;
             }
         }
     }

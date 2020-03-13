@@ -1,11 +1,14 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
+  <PropertyGroup>
+    <UseNotNullRx Condition="'$(UseNotNullRx)' == ''">false</UseNotNullRx>
+    <_RxFlavor>Legacy</_RxFlavor>
+    <_RxFlavor Condition="'$(Nullable)' == 'enable' And '$(UseNotNullRx)' == 'true'">NotNull</_RxFlavor>
+    <_RxFlavor Condition="'$(Nullable)' == 'enable' And '$(UseNotNullRx)' != 'true'">Nullable</_RxFlavor>
+  </PropertyGroup>
+
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)/Nullable/*.cs" Condition="'$(Nullable)' == 'enable'">
-      <Visible>false</Visible>
-      <Link />
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)/Legacy/*.cs" Condition="'$(Nullable)' != 'enable'">
+    <Compile Include="$(MSBuildThisFileDirectory)/$(_RxFlavor)/*.cs">
       <Visible>false</Visible>
       <Link />
     </Compile>

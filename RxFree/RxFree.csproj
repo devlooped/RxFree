@@ -4,22 +4,26 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-     <DocumentationFile>bin\RxFree.xml</DocumentationFile>
- </PropertyGroup>
+    <DocumentationFile>bin\RxFree.xml</DocumentationFile>
+    <Nullable>enable</Nullable>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
 
   <PropertyGroup Label="Metadata">
+    <PackageId>RxFree</PackageId>
     <Title>Reactive Extensions for Libraries (RxFree) for C#</Title>
-    <Description>Provides dependency-free (source-based) support for library authors exposing IObservables without taking a dependency on System.Reactive (or anything else).
+    <Description>
+      Provides dependency-free (source-based) support for library authors exposing IObservables without taking a dependency on System.Reactive (or anything else).
 
-Provided types and extension methods:
-- Disposable.Empty and Disposable.Create(Action)
-- CompositeDisposable
- - Subject&lt;T&gt;
- - For IObservable&lt;T&gt;:
-   * Subscribe overloads receiving delegates for onNext, onError and onCompleted
-   * Select/Where LINQ operators
-   * OfType&lt;T&gt; to filter and project an observable of one type into another
-</Description>
+      Provided types and extension methods:
+      - Disposable.Empty and Disposable.Create(Action)
+      - CompositeDisposable
+      - Subject&lt;T&gt;
+      - For IObservable&lt;T&gt;:
+      * Subscribe overloads receiving delegates for onNext, onError and onCompleted
+      * Select/Where LINQ operators
+      * OfType&lt;T&gt; to filter and project an observable of one type into another
+    </Description>
 
     <Authors>Daniel Cazzulino</Authors>
     <Owners>kzu</Owners>
@@ -36,19 +40,43 @@ Provided types and extension methods:
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Remove="build\Nullable\*.cs" Condition="'$(Nullable)' != 'enable'" />
+    <Compile Remove="build\NotNull\*.cs" Condition="'$(Nullable)' != 'enable'" />
     <Compile Remove="build\Legacy\*.cs" Condition="'$(Nullable)' == 'enable'" />
-    <None Include="build\**\*.cs">
+    <None Include="build\**\*.cs" CopyToOutputDirectory="PreserveNewest" PackagePath="build\%(RecursiveDir)%(Filename)%(Extension)" Pack="true" />
+    <Compile Remove="build\Nullable\CompositeDisposable.cs" />
+    <Compile Remove="build\Nullable\Disposable.cs" />
+    <Compile Remove="build\Nullable\ObservableExtensions.cs" />
+    <Compile Remove="build\Nullable\ObservableExtensions.OfType.cs" />
+    <Compile Remove="build\Nullable\ObservableExtensions.Select.cs" />
+    <Compile Remove="build\Nullable\ObservableExtensions.Where.cs" />
+    <Compile Remove="build\Nullable\StableCompositeDisposable.cs" />
+    <Compile Remove="build\Nullable\Subject.cs" />
+    <None Update="build\Nullable\CompositeDisposable.cs">
       <PackagePath>build\%(RecursiveDir)%(Filename)%(Extension)</PackagePath>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Pack>true</Pack>
     </None>
-    <None Update="build\RxFree.targets">
-      <PackagePath>build\%(Filename)%(Extension)</PackagePath>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Pack>true</Pack>
+    <None Update="build\Nullable\Disposable.cs">
+      <PackagePath>build\%(RecursiveDir)%(Filename)%(Extension)</PackagePath>
     </None>
-    <None Update="build\RxFree.props" CopyToOutputDirectory="PreserveNewest" Pack="true" PackagePath="build\%(Filename)%(Extension)" />
+    <None Update="build\Nullable\ObservableExtensions.cs">
+      <PackagePath>build\%(RecursiveDir)%(Filename)%(Extension)</PackagePath>
+    </None>
+    <None Update="build\Nullable\ObservableExtensions.OfType.cs">
+      <PackagePath>build\%(RecursiveDir)%(Filename)%(Extension)</PackagePath>
+    </None>
+    <None Update="build\Nullable\ObservableExtensions.Select.cs">
+      <PackagePath>build\%(RecursiveDir)%(Filename)%(Extension)</PackagePath>
+    </None>
+    <None Update="build\Nullable\ObservableExtensions.Where.cs">
+      <PackagePath>build\%(RecursiveDir)%(Filename)%(Extension)</PackagePath>
+    </None>
+    <None Update="build\Nullable\StableCompositeDisposable.cs">
+      <PackagePath>build\%(RecursiveDir)%(Filename)%(Extension)</PackagePath>
+    </None>
+    <None Update="build\Nullable\Subject.cs">
+      <PackagePath>build\%(RecursiveDir)%(Filename)%(Extension)</PackagePath>
+    </None>
+    <None Update="build\RxFree.props" CopyToOutputDirectory="PreserveNewest" PackagePath="build\%(Filename)%(Extension)" Pack="true" />
+    <None Update="build\RxFree.targets" CopyToOutputDirectory="PreserveNewest" PackagePath="build\%(Filename)%(Extension)" Pack="true" />
   </ItemGroup>
 
   <ItemGroup>

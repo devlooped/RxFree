@@ -8,10 +8,10 @@
         /// <typeparam name="T">The type to filter the elements in the source sequence on.</typeparam>
         /// <param name="source">The sequence that contains the elements to be filtered.</param>
         /// <exception cref="ArgumentNullException"><paramref name="source"/> is null.</exception>
-        public static IObservable<T> OfType<T>(this IObservable<object> source)
+        public static IObservable<T> OfType<T>(this IObservable<object> source) where T : notnull
             => new OfTypeSubject<T>(source ?? throw new ArgumentNullException(nameof(source)));
 
-        class OfTypeSubject<T> : Subject<T>
+        class OfTypeSubject<T> : Subject<T> where T : notnull
         {
             IDisposable? subscription;
 
