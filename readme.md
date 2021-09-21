@@ -1,4 +1,5 @@
-# RxFree
+![Icon](https://raw.githubusercontent.com/devlooped/RxFree/main/assets/img/icon.png) RxFree
+============
 
 An ultra-lightweight Rx source-only nuget to avoid depending on the full 
 [System.Reactive](https://www.nuget.org/packages/System.Reactive) for `IObservable<T>` 
