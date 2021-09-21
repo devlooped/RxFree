@@ -1,5 +1,3 @@
-# RxFree
-
 An ultra-lightweight Rx source-only nuget to avoid depending on the full 
 [System.Reactive](https://www.nuget.org/packages/System.Reactive) for `IObservable<T>` 
 producers.
@@ -38,22 +36,6 @@ This is what this project provides at the moment, in source form, in your projec
 classes for your own implementation usage, with no external dependencies. They are not even 
 visible in the project since NuGet provides them automatically to the compiler, embedded into 
 your own assembly, and which you can fully debug as any other code in your project.
-
-
-# Dogfooding
-
-[![CI Version](https://img.shields.io/endpoint?url=https://shields.kzu.io/vpre/RxFree/main&label=nuget.ci&color=brightgreen)](https://pkg.kzu.io/index.json)
-[![Build](https://github.com/devlooped/RxFree/workflows/build/badge.svg?branch=main)](https://github.com/devlooped/RxFree/actions)
-
-We also produce CI packages from branches and pull requests so you can dogfood builds as quickly as they are produced. 
-
-The CI feed is `https://pkg.kzu.io/index.json`. 
-
-The versioning scheme for packages is:
-
-- PR builds: *42.42.42-pr*`[NUMBER]`
-- Branch builds: *42.42.42-*`[BRANCH]`.`[COMMITS]`
-
 
 
 ## Sponsors

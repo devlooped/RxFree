@@ -7,11 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RxFree", "src\RxFree\RxFree
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RxFree.Tests", "src\RxFree.Tests\RxFree.Tests.csproj", "{9C1BA247-9164-4A60-82F7-24364A353E1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RxFree.SourceTests", "src\RxFree.SourceTests\RxFree.SourceTests.csproj", "{BA6410EE-DECB-435B-AD4F-DA8A78AA9D85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RxFree.SourceTests", "src\RxFree.SourceTests\RxFree.SourceTests.csproj", "{BA6410EE-DECB-435B-AD4F-DA8A78AA9D85}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{768BF814-BBED-4362-A745-30F79160EA40}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		readme.md = readme.md
 	EndProjectSection
 EndProject
 Global
