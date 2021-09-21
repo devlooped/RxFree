@@ -43,7 +43,7 @@ namespace System
         /// <summary>
         /// Creates a subject.
         /// </summary>
-        public Subject() => Volatile.Write(ref observers, Empty);
+        public Subject() => observers = Array.Empty<SubjectDisposable>();
 
         /// <summary>
         /// Indicates whether the subject has been disposed.

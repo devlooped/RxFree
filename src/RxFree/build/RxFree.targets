@@ -7,7 +7,7 @@
     <_RxFlavor Condition="'$(Nullable)' == 'enable' And '$(UseNotNullRx)' != 'true'">Nullable</_RxFlavor>
   </PropertyGroup>
 
-  <ItemGroup>
+  <ItemGroup Condition="'$(Language)' == 'C#'">
     <Compile Include="$(MSBuildThisFileDirectory)/$(_RxFlavor)/*.cs">
       <Visible>false</Visible>
       <Link />

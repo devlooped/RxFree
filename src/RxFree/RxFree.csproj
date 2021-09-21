@@ -2,11 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <IncludeBuildOutput>false</IncludeBuildOutput>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <DocumentationFile>bin\RxFree.xml</DocumentationFile>
-    <Nullable>enable</Nullable>
-    <LangVersion>8.0</LangVersion>
+    <PackBuildOutput>false</PackBuildOutput>
   </PropertyGroup>
 
   <PropertyGroup Label="Metadata">
@@ -24,15 +20,7 @@
       * Select/Where LINQ operators
       * OfType&lt;T&gt; to filter and project an observable of one type into another
     </Description>
-
-    <Authors>Daniel Cazzulino</Authors>
-    <Owners>kzu</Owners>
-
-    <PackageProjectUrl>https://github.com/kzu/RxFree/</PackageProjectUrl>
-    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <Copyright>Copyright © 2019 Daniel Cazzulino</Copyright>
-
-    <PackageOutputPath Condition="'$(PackageOutputPath)' == ''">$(MSBuildThisFileDirectory)..\out</PackageOutputPath>
+    <PackageProjectUrl>https://github.com/devlooped/RxFree/</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
@@ -80,7 +68,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="GitInfo" Version="2.0.20" PrivateAssets="all" />
+    <PackageReference Include="NuGetizer" Version="0.7.4" />
   </ItemGroup>
 
 </Project>
