@@ -30,7 +30,6 @@
   <ItemGroup>
     <Compile Remove="build\NotNull\*.cs" Condition="'$(Nullable)' != 'enable'" />
     <Compile Remove="build\Legacy\*.cs" Condition="'$(Nullable)' == 'enable'" />
-    <None Include="build\**\*.cs" CopyToOutputDirectory="PreserveNewest" PackagePath="build\%(RecursiveDir)%(Filename)%(Extension)" Pack="true" />
     <Compile Remove="build\Nullable\CompositeDisposable.cs" />
     <Compile Remove="build\Nullable\Disposable.cs" />
     <Compile Remove="build\Nullable\ObservableExtensions.cs" />
@@ -39,30 +38,7 @@
     <Compile Remove="build\Nullable\ObservableExtensions.Where.cs" />
     <Compile Remove="build\Nullable\StableCompositeDisposable.cs" />
     <Compile Remove="build\Nullable\Subject.cs" />
-    <None Update="build\Nullable\CompositeDisposable.cs">
-      <PackagePath>build\%(RecursiveDir)%(Filename)%(Extension)</PackagePath>
-    </None>
-    <None Update="build\Nullable\Disposable.cs">
-      <PackagePath>build\%(RecursiveDir)%(Filename)%(Extension)</PackagePath>
-    </None>
-    <None Update="build\Nullable\ObservableExtensions.cs">
-      <PackagePath>build\%(RecursiveDir)%(Filename)%(Extension)</PackagePath>
-    </None>
-    <None Update="build\Nullable\ObservableExtensions.OfType.cs">
-      <PackagePath>build\%(RecursiveDir)%(Filename)%(Extension)</PackagePath>
-    </None>
-    <None Update="build\Nullable\ObservableExtensions.Select.cs">
-      <PackagePath>build\%(RecursiveDir)%(Filename)%(Extension)</PackagePath>
-    </None>
-    <None Update="build\Nullable\ObservableExtensions.Where.cs">
-      <PackagePath>build\%(RecursiveDir)%(Filename)%(Extension)</PackagePath>
-    </None>
-    <None Update="build\Nullable\StableCompositeDisposable.cs">
-      <PackagePath>build\%(RecursiveDir)%(Filename)%(Extension)</PackagePath>
-    </None>
-    <None Update="build\Nullable\Subject.cs">
-      <PackagePath>build\%(RecursiveDir)%(Filename)%(Extension)</PackagePath>
-    </None>
+    <None Include="build\**\*.cs" CopyToOutputDirectory="PreserveNewest" PackagePath="build\%(RecursiveDir)%(Filename)%(Extension)" Pack="true" />
     <None Update="build\RxFree.props" CopyToOutputDirectory="PreserveNewest" PackagePath="build\%(Filename)%(Extension)" Pack="true" />
     <None Update="build\RxFree.targets" CopyToOutputDirectory="PreserveNewest" PackagePath="build\%(Filename)%(Extension)" Pack="true" />
   </ItemGroup>
