@@ -35,7 +35,7 @@ namespace System
         /// <summary>
         /// Indicates whether the subject has observers subscribed to it.
         /// </summary>
-        public override bool HasObservers => Volatile.Read(ref observers).Length != 0;
+        public virtual bool HasObservers => Volatile.Read(ref observers).Length != 0;
 
         /// <summary>
         /// Indicates whether the subject has been disposed.
