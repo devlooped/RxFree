@@ -16,6 +16,24 @@ the bare essentials for source-only inclusion, with `Subject<T>` being pretty mu
 the same). 
 For example: [Using Subjects](https://docs.microsoft.com/en-us/previous-versions/dotnet/reactive-extensions/hh242970(v=vs.103)).
 
+```csharp
+using System;
+
+var subject = new Subject<string>();
+
+subject.Subscribe(x => Console.WriteLine($"Got raw value {x}"));
+
+subject.Where(x => int.TryParse(x, out _))
+    .Select(x => int.Parse(x))
+    .Subscribe(x => Console.WriteLine($"Got number {x} (squared is {x * x})"));
+
+subject.Where(x => bool.TryParse(x, out var value) && value)
+    .Subscribe(x => Console.WriteLine($"Got a boolean True"));
+
+while (Console.ReadLine() is var line && !string.IsNullOrEmpty(line))
+    subject.OnNext(line);
+```
+
 # Why
 
 For the most part, a producer needs the `Subject<T>` (read more about 
