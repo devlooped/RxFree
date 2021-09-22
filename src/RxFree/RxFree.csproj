@@ -15,7 +15,7 @@
       Subject&lt;T&gt;, CompositeDisposable, IObservable&lt;T&gt;.Subscribe extension method overloads,
       IObservable&gt;T&lt;.Select/Where/OfType LINQ operators, and others.
     </Description>
-    <PackageProjectUrl>https://github.com/devlooped/RxFree/</PackageProjectUrl>
+    <PackageProjectUrl>https://clarius.org/RxFree/</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
@@ -40,6 +40,7 @@
 
   <ItemGroup>
     <PackageReference Include="NuGetizer" Version="0.7.4" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="all" />
   </ItemGroup>
 
 </Project>
