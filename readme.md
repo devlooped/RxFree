@@ -19,7 +19,8 @@ All of the documentation and samples for `Subject<T>` and the provided extension
 (i.e. `Subscribe` overloads) that are officially available for `System.Reactive` apply to 
 this project as well, since the implementations are heavily based on it (taking them to 
 the bare essentials for source-only inclusion, with `Subject<T>` being pretty much exactly 
-the same).
+the same). 
+For example: [Using Subjects](https://docs.microsoft.com/en-us/previous-versions/dotnet/reactive-extensions/hh242970(v=vs.103)).
 
 # Why
 
