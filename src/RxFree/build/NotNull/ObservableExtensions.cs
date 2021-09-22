@@ -13,7 +13,7 @@ namespace System
     [GeneratedCode("RxFree", "*")]
     [CompilerGenerated]
     [ExcludeFromCodeCoverage]
-    internal static partial class ObservableExtensions
+    static partial class ObservableExtensions
     {
         static readonly Action<Exception> rethrow = e => ExceptionDispatchInfo.Capture(e).Throw();
         static readonly Action nop = () => { };

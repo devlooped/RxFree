@@ -14,7 +14,7 @@ namespace System
     [GeneratedCode("RxFree", "*")]
     [CompilerGenerated]
     [ExcludeFromCodeCoverage]
-    internal class CompositeDisposable : IDisposable
+    partial class CompositeDisposable : IDisposable
     {
         bool disposed;
         readonly ConcurrentBag<IDisposable> disposables;

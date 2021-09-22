@@ -10,7 +10,7 @@ namespace System
     /// </summary>
     [EditorBrowsable(EditorBrowsableState.Never)]
     [ExcludeFromCodeCoverage]
-    internal class StableCompositeDisposable
+    partial class StableCompositeDisposable
     {
         /// <summary>
         /// For compatibility with Rx

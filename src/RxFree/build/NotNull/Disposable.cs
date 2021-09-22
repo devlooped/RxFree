@@ -9,7 +9,7 @@ namespace System
     /// Provides a set of static methods for creating <see cref="IDisposable"/> objects.
     /// </summary>
     [ExcludeFromCodeCoverage]
-    public static class Disposable
+    static partial class Disposable
     {
         /// <summary>
         /// Gets the disposable that does nothing when disposed.

@@ -21,7 +21,7 @@ namespace System
     [GeneratedCode("RxFree", "*")]
     [CompilerGenerated]
     [ExcludeFromCodeCoverage]
-    internal class Subject<T> : IObserver<T>, IObservable<T>, IDisposable
+    partial class Subject<T> : IObserver<T>, IObservable<T>, IDisposable
     {
         static readonly SubjectDisposable[] Terminated = new SubjectDisposable[0];
         static readonly SubjectDisposable[] Disposed = new SubjectDisposable[0];
