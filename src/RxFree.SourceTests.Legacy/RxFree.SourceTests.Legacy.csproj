@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\RxFree\build\RxFree.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\RxFree.Tests\DisposableTests.cs" Link="DisposableTests.cs" />
+    <Compile Include="..\RxFree.Tests\LinqTests.cs" Link="LinqTests.cs" />
+    <Compile Include="..\RxFree.Tests\SubjectTests.cs" Link="SubjectTests.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.4" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3" />
+  </ItemGroup>
+
+  <Import Project="..\RxFree\build\RxFree.targets" />
+</Project>
