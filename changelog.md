@@ -1,8 +1,8 @@
 
 
-## [v1.0.2](https://github.com/devlooped/RxFree/tree/v1.0.2) (2021-09-22)
+## [v1.0.3](https://github.com/devlooped/RxFree/tree/v1.0.3) (2021-09-22)
 
-[Full Changelog](https://github.com/devlooped/RxFree/compare/v1.0.0...v1.0.2)
+[Full Changelog](https://github.com/devlooped/RxFree/compare/v1.0.0...v1.0.3)
 
 :sparkles: Implemented enhancements:
 
