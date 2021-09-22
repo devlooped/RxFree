@@ -15,6 +15,7 @@ Subject&lt;T&gt;, CompositeDisposable, IObservable&lt;T&gt;.Subscribe extension 
 IObservable&gt;T&lt;.Select/Where/OfType LINQ operators, and others.
     </Description>
     <PackageProjectUrl>https://clarius.org/RxFree/</PackageProjectUrl>
+    <IsDevelopmentDependency>true</IsDevelopmentDependency>
   </PropertyGroup>
 
   <ItemGroup>
