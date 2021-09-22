@@ -26,11 +26,13 @@ the same).
 For the most part, a producer needs the `Subject<T>` (read more about 
 [using subjects](https://docs.microsoft.com/en-us/previous-versions/dotnet/reactive-extensions/hh242970(v=vs.103))) 
 and maybe the `ObservableExtensions` that provide `Subscribe` overloads to provide 
-lambdas instead of an `IObserver<T>`. 
+lambdas instead of an `IObserver<T>`. Taking the somewhat large and heavy dependency 
+on the full [System.Reactive](https://www.nuget.org/packages/System.Reactive) to consume 
+just the basics a reusable library needs is overkill in most cases.
 
-In addition, typical activities of a producer are to handle disposables and potentially 
-filter/query/convert other producers they consume themselves. So the following simple  
-features are provided: 
+In addition to `Subject<T>`, typical activities of a producer are to handle disposables 
+and potentially filter/query/convert other observables they consume themselves. 
+So the following simple features are provided: 
 
 - `Disposable.Empty` and `Disposable.Create(Action)`
 - `CompositeDisposable`: allows disposing subscriptions as a group
