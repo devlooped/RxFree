@@ -2,7 +2,7 @@
 ============
 
 Reactive extensions for C# libraries as an ultra-lightweight source-only alternative to the full
-[System.Reactive](https://www.nuget.org/packages/System.Reactive) for IObservable&gt;T&lt; producers.
+[System.Reactive](https://www.nuget.org/packages/System.Reactive) for IObservable&lt;T&gt; producers.
 
 100% dependency-free (source-based) support for library authors exposing IObservable&lt;T&gt; leveraging 
 Subject&lt;T&gt;, CompositeDisposable, IObservable&lt;T&gt;.Subscribe extension method overloads,
