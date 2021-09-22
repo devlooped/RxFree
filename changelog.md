@@ -1,5 +1,9 @@
 
 
+## [v1.0.0-rc.13](https://github.com/devlooped/RxFree/tree/v1.0.0-rc.13) (2021-09-22)
+
+[Full Changelog](https://github.com/devlooped/RxFree/compare/v1.0.0-rc.12...v1.0.0-rc.13)
+
 ## [v1.0.0-rc.12](https://github.com/devlooped/RxFree/tree/v1.0.0-rc.12) (2021-09-21)
 
 [Full Changelog](https://github.com/devlooped/RxFree/compare/0317ddb89fe039443e3e819611159ad2c39357d0...v1.0.0-rc.12)
