@@ -1,5 +1,14 @@
 
 
+## [v1.0.1](https://github.com/devlooped/RxFree/tree/v1.0.1) (2021-09-22)
+
+[Full Changelog](https://github.com/devlooped/RxFree/compare/v1.0.0...v1.0.1)
+
+:sparkles: Implemented enhancements:
+
+- Mark package as a development dependency [\#5](https://github.com/devlooped/RxFree/issues/5)
+- Add \#nullable enable context to source files as suggested by analyzer [\#4](https://github.com/devlooped/RxFree/issues/4)
+
 ## [v1.0.0](https://github.com/devlooped/RxFree/tree/v1.0.0) (2021-09-22)
 
 [Full Changelog](https://github.com/devlooped/RxFree/compare/v1.0.0-rc.13...v1.0.0)
