@@ -1,5 +1,13 @@
 
 
+## [v1.0.4](https://github.com/devlooped/RxFree/tree/v1.0.4) (2021-09-22)
+
+[Full Changelog](https://github.com/devlooped/RxFree/compare/v1.0.3...v1.0.4)
+
+:sparkles: Implemented enhancements:
+
+- Make all source-provided classes partial so the consumer can decide visibility [\#6](https://github.com/devlooped/RxFree/issues/6)
+
 ## [v1.0.3](https://github.com/devlooped/RxFree/tree/v1.0.3) (2021-09-22)
 
 [Full Changelog](https://github.com/devlooped/RxFree/compare/v1.0.0...v1.0.3)
