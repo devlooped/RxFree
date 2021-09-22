@@ -12,23 +12,24 @@ producers.
 All of the documentation and samples for `Subject<T>` and the provided extension methods 
 (i.e. `Subscribe` overloads) that are officially available for `System.Reactive` apply to 
 this project as well, since the implementations are heavily based on it (taking them to 
-the bare essentials for source-only inclusion).
+the bare essentials for source-only inclusion, with `Subject<T>` being pretty much exactly 
+the same).
 
 # Why
 
 For the most part, a producer needs the `Subject<T>` (read more about 
 [using subjects](https://docs.microsoft.com/en-us/previous-versions/dotnet/reactive-extensions/hh242970(v=vs.103))) 
-and maybe the `ObservableExtensions` that provide `Subscribe` overloads to provide 
-lambdas instead of an `IObserver<T>`. 
+and the `ObservableExtensions` that provide `Subscribe` overloads to provide 
+lambda-based subscription instead of having to provide an `IObserver<T>`. 
 
 In addition, typical activities of a producer are to handle disposables and potentially 
 filter/query/convert other producers they consume themselves. So the following simple  
 features are provided: 
 
+- `Subject<T>`: for producing observable sequences
 - `Disposable.Empty` and `Disposable.Create(Action)`
 - `CompositeDisposable`: allows disposing subscriptions as a group
- - `Subject<T>`: for producing observable sequences
- - Extension methods for `IObservable<T>`:
+- Extension methods for `IObservable<T>`:
    * `Subscribe` overloads receiving delegates for onNext, onError and onCompleted
    * `Select`/`Where`/`OfType` LINQ operators
 

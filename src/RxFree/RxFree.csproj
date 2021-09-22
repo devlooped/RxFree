@@ -7,18 +7,13 @@
 
   <PropertyGroup Label="Metadata">
     <PackageId>RxFree</PackageId>
-    <Title>Reactive Extensions for Libraries (RxFree) for C#</Title>
     <Description>
-      Provides dependency-free (source-based) support for library authors exposing IObservables without taking a dependency on System.Reactive (or anything else).
+      Reactive extensions for C# libraries as an ultra-lightweight source-only alternative to the full
+      [System.Reactive](https://www.nuget.org/packages/System.Reactive) for IObservable&gt;T&lt; producers.
 
-      Provided types and extension methods:
-      - Disposable.Empty and Disposable.Create(Action)
-      - CompositeDisposable
-      - Subject&lt;T&gt;
-      - For IObservable&lt;T&gt;:
-      * Subscribe overloads receiving delegates for onNext, onError and onCompleted
-      * Select/Where LINQ operators
-      * OfType&lt;T&gt; to filter and project an observable of one type into another
+      100% dependency-free (source-based) support for library authors exposing IObservables leveraging 
+      Subject&lt;T&gt;, CompositeDisposable, IObservable&lt;T&gt;.Subscribe extension method overloads,
+      IObservable&gt;T&lt;.Select/Where/OfType LINQ operators, and others.
     </Description>
     <PackageProjectUrl>https://github.com/devlooped/RxFree/</PackageProjectUrl>
   </PropertyGroup>

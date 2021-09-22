@@ -1,9 +1,12 @@
 ![Icon](https://raw.githubusercontent.com/devlooped/RxFree/main/assets/img/icon.png) RxFree
 ============
 
-An ultra-lightweight Rx source-only nuget to avoid depending on the full 
-[System.Reactive](https://www.nuget.org/packages/System.Reactive) for `IObservable<T>` 
-producers.
+Reactive extensions for C# libraries as an ultra-lightweight source-only alternative to the full
+[System.Reactive](https://www.nuget.org/packages/System.Reactive) for IObservable&gt;T&lt; producers.
+
+100% dependency-free (source-based) support for library authors exposing IObservable&lt;T&gt; leveraging 
+Subject&lt;T&gt;, CompositeDisposable, IObservable&lt;T&gt;.Subscribe extension method overloads,
+IObservable&gt;T&lt;.Select/Where/OfType LINQ operators, and others.
 
 [![Version](https://img.shields.io/nuget/vpre/RxFree.svg?color=royalblue)](https://www.nuget.org/packages/RxFree)
 [![Downloads](https://img.shields.io/nuget/dt/RxFree.svg?color=darkmagenta)](https://www.nuget.org/packages/RxFree)
@@ -15,7 +18,8 @@ producers.
 All of the documentation and samples for `Subject<T>` and the provided extension methods 
 (i.e. `Subscribe` overloads) that are officially available for `System.Reactive` apply to 
 this project as well, since the implementations are heavily based on it (taking them to 
-the bare essentials for source-only inclusion).
+the bare essentials for source-only inclusion, with `Subject<T>` being pretty much exactly 
+the same).
 
 # Why
 
