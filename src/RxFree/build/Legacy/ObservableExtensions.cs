@@ -43,25 +43,5 @@ namespace System
         /// </summary>
         public static IDisposable Subscribe<T>(this IObservable<T> source, Action<T> onNext, Action<Exception> onError, Action onCompleted)
             => source.Subscribe(new AnonymousObserver<T>(onNext, onError, onCompleted));
-
-        class AnonymousObserver<T> : IObserver<T>
-        {
-            readonly Action<T> onNext;
-            readonly Action<Exception> onError;
-            readonly Action onCompleted;
-
-            public AnonymousObserver(Action<T> onNext, Action<Exception> onError, Action onCompleted)
-            {
-                this.onNext = onNext;
-                this.onError = onError;
-                this.onCompleted = onCompleted;
-            }
-
-            public void OnCompleted() => onCompleted();
-
-            public void OnError(Exception error) => onError(error);
-
-            public void OnNext(T value) => onNext(value);
-        }
     }
 }
