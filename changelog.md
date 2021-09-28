@@ -1,5 +1,13 @@
 
 
+## [v1.0.5](https://github.com/devlooped/RxFree/tree/v1.0.5) (2021-09-27)
+
+[Full Changelog](https://github.com/devlooped/RxFree/compare/v1.0.4...v1.0.5)
+
+:sparkles: Implemented enhancements:
+
+- Expose AnonymousObserver [\#8](https://github.com/devlooped/RxFree/issues/8)
+
 ## [v1.0.4](https://github.com/devlooped/RxFree/tree/v1.0.4) (2021-09-22)
 
 [Full Changelog](https://github.com/devlooped/RxFree/compare/v1.0.3...v1.0.4)
