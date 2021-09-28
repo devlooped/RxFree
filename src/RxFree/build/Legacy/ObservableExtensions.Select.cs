@@ -1,4 +1,6 @@
-﻿namespace System
+﻿using System.Reactive.Subjects;
+
+namespace System.Reactive.Linq
 {
     partial class ObservableExtensions
     {

@@ -1,6 +1,6 @@
 ﻿using System.Runtime.ExceptionServices;
 
-namespace System
+namespace System.Reactive
 {
     /// <summary>
     /// Create an <see cref="IObserver{T}"/> instance from delegate-based implementations 

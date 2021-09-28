@@ -1,6 +1,8 @@
-﻿namespace System
+﻿using System.Reactive.Subjects;
+
+namespace System.Reactive.Linq
 {
-    partial class ObservableExtensions
+    static partial class ObservableExtensions
     {
         /// <summary>
         /// Filters the elements of an observable sequence based on the specified type.
