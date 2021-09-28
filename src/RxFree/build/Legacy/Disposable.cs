@@ -2,7 +2,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Threading;
 
-namespace System
+namespace System.Reactive.Disposables
 {
     /// <summary>
     /// Provides a set of static methods for creating <see cref="IDisposable"/> objects.

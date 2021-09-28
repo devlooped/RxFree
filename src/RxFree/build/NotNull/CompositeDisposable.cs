@@ -6,7 +6,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 using System.Threading;
 
-namespace System
+namespace System.Reactive.Disposables
 {
     /// <summary>
     /// Represents a group of disposable resources that are disposed together.

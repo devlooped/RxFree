@@ -2,6 +2,7 @@
 #nullable enable
 using System.CodeDom.Compiler;
 using System.Diagnostics.CodeAnalysis;
+using System.Reactive;
 using System.Runtime.CompilerServices;
 using System.Runtime.ExceptionServices;
 

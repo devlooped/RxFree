@@ -3,7 +3,7 @@
 using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 
-namespace System
+namespace System.Reactive.Disposables
 {
     /// <summary>
     /// For compatibility with Rx

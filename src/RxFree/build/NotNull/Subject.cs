@@ -11,7 +11,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 using System.Threading;
 
-namespace System
+namespace System.Reactive.Subjects
 {
     /// <summary>
     /// Represents an object that is both an observable sequence as well as an observer.
