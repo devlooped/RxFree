@@ -16,6 +16,7 @@ For example: [Using Subjects](https://docs.microsoft.com/en-us/previous-versions
 
 ```csharp
 using System;
+using System.Reactive.Subjects;
 
 var subject = new Subject<string>();
 
@@ -31,6 +32,10 @@ subject.Where(x => bool.TryParse(x, out var value) && value)
 while (Console.ReadLine() is var line && !string.IsNullOrEmpty(line))
     subject.OnNext(line);
 ```
+
+This package is a drop-in replacement for `System.Reactive` if you are only using the 
+most common subset of features in it that are also provided in this project.
+
 
 # Why
 
