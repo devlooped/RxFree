@@ -1,4 +1,13 @@
+# Changelog
 
+## [v1.1.0](https://github.com/devlooped/RxFree/tree/v1.1.0) (2021-10-28)
+
+[Full Changelog](https://github.com/devlooped/RxFree/compare/v1.0.5...v1.1.0)
+
+:sparkles: Implemented enhancements:
+
+- Match System.Reactive namespaces [\#9](https://github.com/devlooped/RxFree/issues/9)
+- Match System.Reactive namespaces [\#11](https://github.com/devlooped/RxFree/pull/11) (@kzu)
 
 ## [v1.0.5](https://github.com/devlooped/RxFree/tree/v1.0.5) (2021-09-27)
 
