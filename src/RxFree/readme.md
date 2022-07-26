@@ -1,4 +1,4 @@
-An ultra-lightweight Rx source-only nuget to avoid depending on the full 
+An ultra-lightweight Rx source-only (C#) nuget to avoid depending on the full 
 [System.Reactive](https://www.nuget.org/packages/System.Reactive) for `IObservable<T>` 
 producers.
 

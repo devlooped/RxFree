@@ -1,8 +1,9 @@
 ![Icon](https://raw.githubusercontent.com/devlooped/RxFree/main/assets/img/icon.png) RxFree
 ============
 
-Reactive extensions for C# libraries as an ultra-lightweight source-only alternative to the full
-[System.Reactive](https://www.nuget.org/packages/System.Reactive) for IObservable&lt;T&gt; producers.
+An ultra-lightweight Rx source-only (C#) nuget to avoid depending on the full 
+[System.Reactive](https://www.nuget.org/packages/System.Reactive) for `IObservable<T>` 
+producers.
 
 100% dependency-free (source-based) support for library authors exposing IObservable&lt;T&gt; leveraging 
 Subject&lt;T&gt;, CompositeDisposable, IObservable&lt;T&gt;.Subscribe extension method overloads,

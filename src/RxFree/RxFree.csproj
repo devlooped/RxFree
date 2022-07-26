@@ -7,12 +7,9 @@
 
   <PropertyGroup Label="Metadata">
     <PackageId>RxFree</PackageId>
-    <Description>Reactive extensions for C# libraries as an ultra-lightweight source-only alternative to the full
-[System.Reactive](https://www.nuget.org/packages/System.Reactive) for IObservable&lt;T&gt; producers.
-
-100% dependency-free (source-based) support for library authors exposing IObservables leveraging 
-Subject&lt;T&gt;, CompositeDisposable, IObservable&lt;T&gt;.Subscribe extension method overloads,
-IObservable&lt;T&gt;.Select/Where/OfType LINQ operators, and others.
+    <Description>An ultra-lightweight Rx source-only (C#) nuget to avoid depending on the full 
+[System.Reactive](https://www.nuget.org/packages/System.Reactive) for `IObservable<T>` 
+producers.
     </Description>
     <PackageProjectUrl>https://clarius.org/RxFree/</PackageProjectUrl>
     <IsDevelopmentDependency>true</IsDevelopmentDependency>
