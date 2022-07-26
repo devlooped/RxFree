@@ -32,7 +32,7 @@ IObservable&lt;T&gt;.Select/Where/OfType LINQ operators, and others.
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="NuGetizer" Version="0.7.5" />
+    <PackageReference Include="NuGetizer" Version="0.8.0" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="all" />
   </ItemGroup>
 
