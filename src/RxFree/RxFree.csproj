@@ -8,8 +8,7 @@
   <PropertyGroup Label="Metadata">
     <PackageId>RxFree</PackageId>
     <Description>An ultra-lightweight Rx source-only (C#) nuget to avoid depending on the full 
-[System.Reactive](https://www.nuget.org/packages/System.Reactive) for `IObservable<T>` 
-producers.
+System.Reactive package for `IObservable&lt;T&gt;` producers.
     </Description>
     <PackageProjectUrl>https://clarius.org/RxFree/</PackageProjectUrl>
     <IsDevelopmentDependency>true</IsDevelopmentDependency>
