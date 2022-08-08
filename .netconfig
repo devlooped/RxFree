@@ -164,8 +164,8 @@
 	weak
 [file ".github/workflows/includes.yml"]
 	url = https://github.com/devlooped/oss/blob/main/.github/workflows/includes.yml
-	sha = d94ddb1384daf67602be0c4e02fad6c86b6c79b3
-	etag = d390b05199c9812efa33c1f49c59e80a14cfcb46240f08eb8981b718d659f7c1
+	sha = 4bd76ee33e5f275dfb4e0f509470f27e0f960bf4
+	etag = 2ccd415fb1017a91a2d1fb3321ccfde222f9b502c5b6dbd7efad662535cb7619
 	weak
 [file "docs/footer.md"]
 	url = https://github.com/devlooped/oss/blob/main/docs/footer.md
