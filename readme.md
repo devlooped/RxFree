@@ -71,6 +71,7 @@ classes for your own implementation usage, with no external dependencies. They a
 visible in the project since NuGet provides them automatically to the compiler, embedded into 
 your own assembly, and which you can fully debug as any other code in your project.
 
+<!-- #content -->
 
 # Dogfooding
 
@@ -85,7 +86,6 @@ The versioning scheme for packages is:
 
 - PR builds: *42.42.42-pr*`[NUMBER]`
 - Branch builds: *42.42.42-*`[BRANCH]`.`[COMMITS]`
-
 
 <!-- include docs/footer.md -->
 # Sponsors 
