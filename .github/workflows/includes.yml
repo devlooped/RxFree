@@ -6,6 +6,7 @@ on:
       - 'main'
     paths:
       - '**.md'    
+      - '!changelog.md'
 
 jobs:
   includes:
@@ -17,6 +18,7 @@ jobs:
           name: ${{ secrets.BOT_NAME }}
           email: ${{ secrets.BOT_EMAIL }}
           gh_token: ${{ secrets.GH_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 🤘 checkout
         uses: actions/checkout@v2
