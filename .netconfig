@@ -157,11 +157,6 @@
 	sha = 5d05e541d7b028d64b044c5b9cc80afa19dc0de0
 	etag = c73a2aa293ec204e46771a99b095566082cad7989595ea725e5d76b27fe90894
 	weak
-[file "docs/sponsors.md"]
-	url = https://github.com/devlooped/sponsors/blob/main/sponsors.md
-	sha = 61c63547c933ae35f3793a7cda4f0c6047b9e39a
-	etag = 8712d863c15c2534170cbe97c0e7d1b1167f725197fab567f8ac18fbea38034c
-	weak
 [file ".github/workflows/combine-prs.yml"]
 	url = https://github.com/devlooped/oss/blob/main/.github/workflows/combine-prs.yml
 	sha = 5d2b0731d91f64382395c799cb2cfd13d05e9392
