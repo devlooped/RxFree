@@ -1,13 +1,19 @@
 # Changelog
 
+## [v1.1.3](https://github.com/devlooped/RxFree/tree/v1.1.3) (2024-01-24)
+
+[Full Changelog](https://github.com/devlooped/RxFree/compare/v1.1.2...v1.1.3)
+
+:twisted_rightwards_arrows: Merged:
+
+- ⛙ ⬆️ Bump dependencies [\#37](https://github.com/devlooped/RxFree/pull/37) (@github-actions[bot])
+
 ## [v1.1.2](https://github.com/devlooped/RxFree/tree/v1.1.2) (2022-08-08)
 
 [Full Changelog](https://github.com/devlooped/RxFree/compare/v1.1.1...v1.1.2)
 
 :twisted_rightwards_arrows: Merged:
 
-- +Mᐁ includes [\#29](https://github.com/devlooped/RxFree/pull/29) (@devlooped-bot)
-- +Mᐁ includes [\#28](https://github.com/devlooped/RxFree/pull/28) (@devlooped-bot)
 - +M▼ includes [\#22](https://github.com/devlooped/RxFree/pull/22) (@github-actions[bot])
 
 ## [v1.1.1](https://github.com/devlooped/RxFree/tree/v1.1.1) (2022-07-26)
