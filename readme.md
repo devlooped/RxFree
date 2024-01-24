@@ -55,21 +55,25 @@ lambdas instead of an `IObserver<T>`. Taking the somewhat large and heavy depend
 on the full [System.Reactive](https://www.nuget.org/packages/System.Reactive) to consume 
 just the basics a reusable library needs is overkill in most cases.
 
-In addition to `Subject<T>`, typical activities of a producer are to handle disposables 
-and potentially filter/query/convert other observables they consume themselves. 
-So the following simple features are provided: 
+In addition to `Subject<T>`, typical activities of a producer invole handling 
+disposables and potentially filtering/querying/converting other observables they 
+consume themselves in turn. For that purpose, the following simple features are 
+included too: 
 
+- `Subject<T>`: for producing observable sequences
 - `Disposable.Empty` and `Disposable.Create(Action)`
 - `CompositeDisposable`: allows disposing subscriptions as a group
- - `Subject<T>`: for producing observable sequences
- - Extension methods for `IObservable<T>`:
+- Extension methods for `IObservable<T>`:
    * `Subscribe` overloads receiving delegates for onNext, onError and onCompleted
    * `Select`/`Where`/`OfType` LINQ operators
 
 This is what this project provides at the moment, in source form, in your project, as internal 
 classes for your own implementation usage, with no external dependencies. They are not even 
-visible in the project since NuGet provides them automatically to the compiler, embedded into 
-your own assembly, and which you can fully debug as any other code in your project.
+visible in the project since the package provides them automatically to the compiler, compiled 
+into your own assembly, and which you can fully debug as any other code in your project.
+
+All types are included as `partial` classes, so you can easily add your own code to 
+them, and make them public if you need to.
 
 <!-- #content -->
 
