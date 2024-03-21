@@ -1,9 +1,9 @@
 <h1 align="center">Hi 👋, I'm kzu</h1>
 <p align="center"><i>sounds like 'kah-zu' rather than 'kzoo' :)</i></p>
-<h3 align="center">A hardcode .NET/C# developer from Argentina</h3>
+<h3 align="center">A hardcore .NET/C# developer from Argentina</h3>
 
 [![X](https://img.shields.io/badge/X-@kzu-blue?logo=twitter&logoColor=1D9BF0&labelColor=black)](https://x.com/kzu)
-[![Discord](https://img.shields.io/badge/discord-danielkzu-7289DA.svg?logo=discord&logoColor=white)](https://discord.gg/8PtpGdu)
+[![Discord](https://img.shields.io/badge/discord-danielkzu-7289DA.svg?logo=discord&logoColor=white)](https://discord.gg/2M6WBFrywB)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-danielkzu-0A66C2.svg?logo=linkedin&logoColor=0A66C2&labelColor=silver)]([https://discord.gg/8PtpGdu](https://linkedin.com/in/danielcazzulino))
 
 This is my sponsor account so you can contribute to my ongoing opensource work, no minimum amount required!
@@ -11,7 +11,7 @@ This is my sponsor account so you can contribute to my ongoing opensource work, 
 [![Sponsor me 💜](https://raw.githubusercontent.com/devlooped/sponsors/main/sponsor.png#gh-light-mode-only "Sponsor me 💜")](https://github.com/sponsors/devlooped#gh-light-mode-only)
 [![Sponsor me 💜](https://raw.githubusercontent.com/devlooped/sponsors/main/sponsor-dark.png#gh-dark-mode-only "Sponsor me 💜")](https://github.com/sponsors/devlooped#gh-dark-mode-only)
 
-Some fancy stats about my favorite hobbie (coding on GitHub, of course!):
+Some fancy stats about my favorite hobby (coding on GitHub, of course!):
 
 <p>
 <picture>
