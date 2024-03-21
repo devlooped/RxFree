@@ -1,0 +1,7 @@
+# web app with a /sync endpoint that receives a GH authenticated token and issues a SL JWT
+issuer: https://sponsorlink.devlooped.com/
+# public key to verify JWTs issued by the issuer
+pub: MIIBCgKCAQEAo5bLk9Iim5twrxGVzJ4OxfxDuvy3ladTNvcFNv4Hm9/1No89SISKTXZ1bSABTnqH6z/DpklcHveGMSmsncEvUebrg7tX6+M3byVXU6Q/d82PtwgbDXT9d10A4lePS2ioJQqlHWQy/fuNwe7FjptV+yguf5IUxVRdZ77An1IyGUk9Cj6n4RuYIPrP5O0AmFPHOwEzywUWVaV1NHYRe0Th6i5/hyDV13K7+LP9VzwucnWEvzujtnL6ywZDeaKkwfeFsXZyYywHj6oJK9Obed/nu1e+69fmUqprtc0t/3A9uHc0G/0sDNLLAd83j2NSOS2IHJo17azOLFuhekka8dSKnQIDAQAB
+
+# audience: overrides the GH_TOKEN login, if necessary for JWT generation, it's the sponsorable account
+# subject: to be populated by issuer from the authenticated user, not used in this file
