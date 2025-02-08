@@ -41,8 +41,8 @@
 	weak
 [file ".github/workflows/build.yml"]
 	url = https://github.com/devlooped/oss/blob/main/.github/workflows/build.yml
-	sha = 64141f15e2a032f2c167df972206f05615612bd8
-	etag = 36d2f759807d55f3aa76e6c64ebbf4ed6616f74cfbb9774634fa7375c895dc12
+	sha = 06e898ccba692566ebf845fa7c8833ac6c318c0a
+	etag = 0a4b3f0a875cd8c9434742b4046558aecf610d3fa3d490cfd2099266e95e9195
 	weak
 [file ".github/workflows/changelog.yml"]
 	url = https://github.com/devlooped/oss/blob/main/.github/workflows/changelog.yml
@@ -51,13 +51,13 @@
 	weak
 [file ".github/workflows/dotnet-file.yml"]
 	url = https://github.com/devlooped/oss/blob/main/.github/workflows/dotnet-file.yml
-	sha = 9d58f5c12ead5a8920254eaaba2eccf2d6249ea4
-	etag = f5d78552a7031c250b07204d9dd30dda785224abee3ad4d5327b41924d701dde
+	sha = 59aaf432369b5ea597831d4feec5a6ac4024c2e3
+	etag = 1374e3f8c9b7af69c443605c03f7262300dcb7d783738d9eb9fe84268ed2d10c
 	weak
 [file ".github/workflows/publish.yml"]
 	url = https://github.com/devlooped/oss/blob/main/.github/workflows/publish.yml
-	sha = 64141f15e2a032f2c167df972206f05615612bd8
-	etag = d63da2dbd37be35261432991793a4af0749447584406db7468db258bfe5623cb
+	sha = 06e898ccba692566ebf845fa7c8833ac6c318c0a
+	etag = 2f64f75ad01f735fd05290370fb8a826111ac8dd7e74ce04226bb627a54a62ba
 	weak
 [file ".gitignore"]
 	url = https://github.com/devlooped/oss/blob/main/.gitignore
@@ -128,4 +128,9 @@
 	url = https://github.com/devlooped/oss/blob/main/.github/workflows/triage.yml
 	sha = 33000c0c4ab4eb4e0e142fa54515b811a189d55c
 	etag = 013a47739e348f06891f37c45164478cca149854e6cd5c5158e6f073f852b61a
+	weak
+[file "src/nuget.config"]
+	url = https://github.com/devlooped/oss/blob/main/src/nuget.config
+	sha = 032439dbf180fca0539a5bd3a019f18ab3484b76
+	etag = da7c0104131bd474b52fc9bc9f9bda6470e24ae38d4fb9f5c4f719bc01370ab5
 	weak
