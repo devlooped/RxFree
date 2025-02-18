@@ -4,7 +4,7 @@
 [![Version](https://img.shields.io/nuget/v/RxFree.svg?color=royalblue)](https://www.nuget.org/packages/RxFree)
 [![Downloads](https://img.shields.io/nuget/dt/RxFree.svg?color=darkmagenta)](https://www.nuget.org/packages/RxFree)
 [![License](https://img.shields.io/github/license/devlooped/RxFree.svg?color=blue)](https://github.com/devlooped/RxFree/blob/main/license.txt)
-[![Build](https://github.com/devlooped/RxFree/workflows/build/badge.svg?branch=main)](https://github.com/devlooped/RxFree/actions)
+[![Build](https://github.com/devlooped/RxFree/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/devlooped/RxFree/actions)
 
 <!-- #content -->
 An ultra-lightweight Rx source-only (C#) nuget to avoid depending on the full 
