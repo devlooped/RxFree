@@ -79,12 +79,12 @@ them, and make them public if you need to.
 
 # Dogfooding
 
-[![CI Version](https://img.shields.io/endpoint?url=https://shields.kzu.io/vpre/RxFree/main&label=nuget.ci&color=brightgreen)](https://pkg.kzu.io/index.json)
+[![CI Version](https://img.shields.io/endpoint?url=https://shields.kzu.app/vpre/RxFree/main&label=nuget.ci&color=brightgreen)](https://pkg.kzu.app/index.json)
 [![Build](https://github.com/devlooped/RxFree/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/devlooped/RxFree/actions)
 
 We also produce CI packages from branches and pull requests so you can dogfood builds as quickly as they are produced. 
 
-The CI feed is `https://pkg.kzu.io/index.json`. 
+The CI feed is `https://pkg.kzu.app/index.json`. 
 
 The versioning scheme for packages is:
 
